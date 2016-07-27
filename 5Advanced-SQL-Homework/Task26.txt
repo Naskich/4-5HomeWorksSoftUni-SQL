@@ -1,0 +1,283 @@
+Problem 26.	Write a SQL query to display the 
+minimal employee salary by department and job title along with the 
+name of some of the employees that take it.
+
+SELECT d.Name AS 'Departments',e.JobTitle, e.FirstName,
+  MIN(Salary) AS 'Min Salary'
+FROM Departments d
+JOIN
+Employees e
+ON e.DepartmentID = d.DepartmentID
+GROUP BY e.DepartmentID, e.JobTitle, d.Name , e.FirstName 
+
+Engineering	Design Engineer	Gail	32700,00
+Engineering	Design Engineer	Jossef	32700,00
+Engineering	Design Engineer	Sharon	32700,00
+Engineering	Engineering Manager	Roberto	43300,00
+Engineering	Senior Design Engineer	Michael	36100,00
+Engineering	Vice President of Engineering	Terri	63500,00
+Tool Design	Senior Tool Designer	Ovidiu	28800,00
+Tool Design	Senior Tool Designer	Rob	29800,00
+Tool Design	Tool Designer	Janice	25000,00
+Tool Design	Tool Designer	Thierry	25000,00
+Sales	European Sales Manager	Amy	48100,00
+Sales	North American Sales Manager	Stephen	48100,00
+Sales	Pacific Sales Manager	Syed	48100,00
+Sales	Sales Representative	David	23100,00
+Sales	Sales Representative	Garrett	23100,00
+Sales	Sales Representative	Jae	23100,00
+Sales	Sales Representative	Jillian	23100,00
+Sales	Sales Representative	Jose	23100,00
+Sales	Sales Representative	Linda	23100,00
+Sales	Sales Representative	Lynn	23100,00
+Sales	Sales Representative	Michael	23100,00
+Sales	Sales Representative	Pamela	23100,00
+Sales	Sales Representative	Rachel	23100,00
+Sales	Sales Representative	Ranjit	23100,00
+Sales	Sales Representative	Shu	23100,00
+Sales	Sales Representative	Tete	23100,00
+Sales	Sales Representative	Tsvi	23100,00
+Sales	Vice President of Sales	Brian	72100,00
+Marketing	Marketing Assistant	Kevin	13500,00
+Marketing	Marketing Assistant	Mary	13500,00
+Marketing	Marketing Assistant	Wanida	13500,00
+Marketing	Marketing Specialist	Jill	14400,00
+Marketing	Marketing Specialist	John	14400,00
+Marketing	Marketing Specialist	Mary	14400,00
+Marketing	Marketing Specialist	Sariya	14400,00
+Marketing	Marketing Specialist	Terry	14400,00
+Purchasing	Buyer	Arvind	18300,00
+Purchasing	Buyer	Ben	18300,00
+Purchasing	Buyer	Eric	18300,00
+Purchasing	Buyer	Erin	18300,00
+Purchasing	Buyer	Frank	18300,00
+Purchasing	Buyer	Fukiko	18300,00
+Purchasing	Buyer	Gordon	18300,00
+Purchasing	Buyer	Linda	18300,00
+Purchasing	Buyer	Mikael	18300,00
+Purchasing	Marketing Manager	David	37500,00
+Purchasing	Purchasing Assistant	Annette	12800,00
+Purchasing	Purchasing Assistant	Reinout	12800,00
+Research and Development	Independent .NET Consultant	Martin	48000,00
+Research and Development	Independent Java Consultant	George	48000,00
+Research and Development	Independent Software Development  Consultant	Svetlin	48000,00
+Research and Development	Research and Development Engineer	Diane	40900,00
+Research and Development	Research and Development Engineer	Gigi	40900,00
+Research and Development	Research and Development Manager	Dylan	50500,00
+Research and Development	Research and Development Manager	Michael	42500,00
+Production	Production Supervisor	Andrew	25000,00
+Production	Production Supervisor	Brenda	25000,00
+Production	Production Supervisor	Cristian	25000,00
+Production	Production Supervisor	Cynthia	25000,00
+Production	Production Supervisor	David	25000,00
+Production	Production Supervisor	Eric	25000,00
+Production	Production Supervisor	Jack	25000,00
+Production	Production Supervisor	Jeff	25000,00
+Production	Production Supervisor	Jinghao	25000,00
+Production	Production Supervisor	Jo	25000,00
+Production	Production Supervisor	John	25000,00
+Production	Production Supervisor	JoLynn	25000,00
+Production	Production Supervisor	Katie	25000,00
+Production	Production Supervisor	Kok-Ho	25000,00
+Production	Production Supervisor	Lori	25000,00
+Production	Production Supervisor	Michael	25000,00
+Production	Production Supervisor	Reuben	25000,00
+Production	Production Supervisor	Shane	25000,00
+Production	Production Supervisor	Taylor	25000,00
+Production	Production Supervisor	Yuhong	25000,00
+Production	Production Supervisor	Zheng	25000,00
+Production	Production Technician	Alejandro	15000,00
+Production	Production Technician	Alex	10000,00
+Production	Production Technician	Alice	11000,00
+Production	Production Technician	Andrew	10000,00
+Production	Production Technician	Andy	9500,00
+Production	Production Technician	Angela	11000,00
+Production	Production Technician	Anibal	14000,00
+Production	Production Technician	Annik	12500,00
+Production	Production Technician	Barbara	14000,00
+Production	Production Technician	Baris	15000,00
+Production	Production Technician	Barry	13500,00
+Production	Production Technician	Belinda	10000,00
+Production	Production Technician	Benjamin	9500,00
+Production	Production Technician	Betsy	13500,00
+Production	Production Technician	Bjorn	9500,00
+Production	Production Technician	Bob	11000,00
+Production	Production Technician	Bonnie	13500,00
+Production	Production Technician	Brandon	12500,00
+Production	Production Technician	Brian	15000,00
+Production	Production Technician	Britta	12500,00
+Production	Production Technician	Bryan	12500,00
+Production	Production Technician	Carol	9500,00
+Production	Production Technician	Carole	9500,00
+Production	Production Technician	Chad	11000,00
+Production	Production Technician	Charles	12500,00
+Production	Production Technician	Chris	10000,00
+Production	Production Technician	Christopher	13500,00
+Production	Production Technician	Danielle	13500,00
+Production	Production Technician	David	9500,00
+Production	Production Technician	Denise	11000,00
+Production	Production Technician	Diane	11000,00
+Production	Production Technician	Don	11000,00
+Production	Production Technician	Doris	13500,00
+Production	Production Technician	Douglas	10000,00
+Production	Production Technician	Ebru	13500,00
+Production	Production Technician	Ed	12500,00
+Production	Production Technician	Elizabeth	11000,00
+Production	Production Technician	Eric	15000,00
+Production	Production Technician	Eugene	9500,00
+Production	Production Technician	Fadi	14000,00
+Production	Production Technician	Frank	11000,00
+Production	Production Technician	Fred	15000,00
+Production	Production Technician	Gabe	15000,00
+Production	Production Technician	Garrett	9500,00
+Production	Production Technician	Gary	15000,00
+Production	Production Technician	George	9500,00
+Production	Production Technician	Greg	10000,00
+Production	Production Technician	Guy	12500,00
+Production	Production Technician	Hanying	14000,00
+Production	Production Technician	Houman	11000,00
+Production	Production Technician	Hung-Fu	14000,00
+Production	Production Technician	Ivo	14000,00
+Production	Production Technician	Jack	15000,00
+Production	Production Technician	James	12500,00
+Production	Production Technician	Jan	9500,00
+Production	Production Technician	Janeth	10000,00
+Production	Production Technician	Jason	9500,00
+Production	Production Technician	Jay	12500,00
+Production	Production Technician	Jeffrey	13500,00
+Production	Production Technician	Jian Shuo	9500,00
+Production	Production Technician	Jim	11000,00
+Production	Production Technician	John	9500,00
+Production	Production Technician	Jose	12500,00
+Production	Production Technician	Jun	11000,00
+Production	Production Technician	Karan	12500,00
+Production	Production Technician	Kathie	10000,00
+Production	Production Technician	Ken	15000,00
+Production	Production Technician	Kendall	11000,00
+Production	Production Technician	Kevin	13500,00
+Production	Production Technician	Kim	12500,00
+Production	Production Technician	Kimberly	13500,00
+Production	Production Technician	Kirk	10000,00
+Production	Production Technician	Kitti	11000,00
+Production	Production Technician	Krishna	14000,00
+Production	Production Technician	Lane	14000,00
+Production	Production Technician	Laura	10000,00
+Production	Production Technician	Linda	11000,00
+Production	Production Technician	Lionel	10000,00
+Production	Production Technician	Lolan	11000,00
+Production	Production Technician	Lorraine	15000,00
+Production	Production Technician	Maciej	12500,00
+Production	Production Technician	Mandar	11000,00
+Production	Production Technician	Marc	9500,00
+Production	Production Technician	Margie	12500,00
+Production	Production Technician	Mark	12500,00
+Production	Production Technician	Mary	13500,00
+Production	Production Technician	Merav	9500,00
+Production	Production Technician	Michael	9500,00
+Production	Production Technician	Michiko	9500,00
+Production	Production Technician	Mihail	15000,00
+Production	Production Technician	Min	14000,00
+Production	Production Technician	Mindaugas	11000,00
+Production	Production Technician	Nancy	12500,00
+Production	Production Technician	Nicole	15000,00
+Production	Production Technician	Nitin	14000,00
+Production	Production Technician	Nuan	11000,00
+Production	Production Technician	Olinda	14000,00
+Production	Production Technician	Patrick	13500,00
+Production	Production Technician	Paul	14000,00
+Production	Production Technician	Paula	15000,00
+Production	Production Technician	Pete	11000,00
+Production	Production Technician	Prasanna	14000,00
+Production	Production Technician	Rajesh	15000,00
+Production	Production Technician	Randy	12500,00
+Production	Production Technician	Raymond	14000,00
+Production	Production Technician	Rebecca	12500,00
+Production	Production Technician	Reed	9500,00
+Production	Production Technician	Rob	15000,00
+Production	Production Technician	Robert	10000,00
+Production	Production Technician	Rostislav	9500,00
+Production	Production Technician	Russell	9500,00
+Production	Production Technician	Ruth	13500,00
+Production	Production Technician	Ryan	15000,00
+Production	Production Technician	Samantha	14000,00
+Production	Production Technician	Sameer	11000,00
+Production	Production Technician	Sandeep	15000,00
+Production	Production Technician	Sandra	9500,00
+Production	Production Technician	Scott	10000,00
+Production	Production Technician	Shammi	15000,00
+Production	Production Technician	Shelley	14000,00
+Production	Production Technician	Sidney	13500,00
+Production	Production Technician	Simon	12500,00
+Production	Production Technician	Stefen	14000,00
+Production	Production Technician	Steve	12500,00
+Production	Production Technician	Steven	9500,00
+Production	Production Technician	Stuart	10000,00
+Production	Production Technician	Suchitra	12500,00
+Production	Production Technician	Suroor	11000,00
+Production	Production Technician	Susan	9500,00
+Production	Production Technician	Sylvester	14000,00
+Production	Production Technician	Tawana	15000,00
+Production	Production Technician	Terrence	14000,00
+Production	Production Technician	Thomas	12500,00
+Production	Production Technician	Tom	13500,00
+Production	Production Technician	Yvonne	10000,00
+Production	Vice President of Production	James	84100,00
+Production Control	Master Scheduler	A. Scott	23600,00
+Production Control	Production Control Manager	Peter	24500,00
+Production Control	Scheduling Assistant	Alan	16000,00
+Production Control	Scheduling Assistant	Brian	16000,00
+Production Control	Scheduling Assistant	Sairaj	16000,00
+Production Control	Scheduling Assistant	William	16000,00
+Human Resources	Benefits Specialist	Mindy	16600,00
+Human Resources	Human Resources Administrative Assistant	Grant	13900,00
+Human Resources	Human Resources Administrative Assistant	Hao	13900,00
+Human Resources	Human Resources Manager	Paula	27100,00
+Human Resources	Recruiter	Vidur	18300,00
+Human Resources	Recruiter	Willis	18300,00
+Finance	Accountant	Barbara	26400,00
+Finance	Accountant	Mike	26400,00
+Finance	Accounts Manager	David	34700,00
+Finance	Accounts Payable Specialist	Dragan	19000,00
+Finance	Accounts Payable Specialist	Janet	19000,00
+Finance	Accounts Receivable Specialist	Bryan	19000,00
+Finance	Accounts Receivable Specialist	Candy	19000,00
+Finance	Accounts Receivable Specialist	Deborah	19000,00
+Finance	Assistant to the Chief Financial Officer	David	13500,00
+Finance	Finance Manager	Wendy	43300,00
+Information Services	Application Specialist	Dan	27400,00
+Information Services	Application Specialist	Janaina	27400,00
+Information Services	Application Specialist	Karen	27400,00
+Information Services	Application Specialist	Ramesh	27400,00
+Information Services	Database Administrator	Dan	38500,00
+Information Services	Database Administrator	Francois	38500,00
+Information Services	Information Services Manager	Jean	50500,00
+Information Services	Network Administrator	Ashvini	32500,00
+Information Services	Network Administrator	Peter	32500,00
+Information Services	Network Manager	Stephanie	39700,00
+Document Control	Control Specialist	Chris	16800,00
+Document Control	Control Specialist	Tengiz	16800,00
+Document Control	Document Control Assistant	Karen	10300,00
+Document Control	Document Control Assistant	Sean	10300,00
+Document Control	Document Control Manager	Zainal	17800,00
+Quality Assurance	Purchasing Manager	Sheela	30000,00
+Quality Assurance	Quality Assurance Manager	Hazem	28800,00
+Quality Assurance	Quality Assurance Supervisor	Peng	21600,00
+Quality Assurance	Quality Assurance Technician	Andreas	10600,00
+Quality Assurance	Quality Assurance Technician	Mark	10600,00
+Quality Assurance	Quality Assurance Technician	Sean	10600,00
+Quality Assurance	Quality Assurance Technician	Sootha	10600,00
+Facilities and Maintenance	Facilities Administrative Assistant	Magnus	9800,00
+Facilities and Maintenance	Facilities Manager	Gary	24000,00
+Facilities and Maintenance	Janitor	Jo	9300,00
+Facilities and Maintenance	Janitor	Lori	9300,00
+Facilities and Maintenance	Janitor	Pat	9300,00
+Facilities and Maintenance	Janitor	Stuart	9300,00
+Facilities and Maintenance	Maintenance Supervisor	Christian	20400,00
+Shipping and Receiving	Shipping and Receiving Clerk	Matthias	9500,00
+Shipping and Receiving	Shipping and Receiving Clerk	Vamsi	9500,00
+Shipping and Receiving	Shipping and Receiving Supervisor	Pilar	19200,00
+Shipping and Receiving	Stocker	Jimmy	9000,00
+Shipping and Receiving	Stocker	Kim	9000,00
+Shipping and Receiving	Stocker	Susan	9000,00
+Executive	Chief Executive Officer	Ken	125500,00
+Executive	Chief Financial Officer	Laura	60100,00

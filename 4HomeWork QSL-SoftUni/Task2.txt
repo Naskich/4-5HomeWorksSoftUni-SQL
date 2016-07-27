@@ -1,0 +1,8 @@
+Problem 2.What is Transact-SQL (T-SQL)?
+Perform a research (e.g. in Google or Wikipedia) and provide an information about Transact-SQL.
+You should submit a text file called “t-sql.txt” as a part of your homework.
+
+T-SQL - Transaction Structure Query Language – 
+This is type of language SQL and expands on the SQL standard to include procedural programming, 
+local variables, various support functions for string processing.Transact-SQL is central to using 
+Microsoft SQL Server.

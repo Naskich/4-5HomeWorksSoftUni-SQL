@@ -1,0 +1,13 @@
+Problem 17.	Write a SQL query to find the top 5 best paid employees.
+You should submit a SQL file as a part of your homework.
+
+SELECT TOP 5 Salary, FirstName +' ' + LastName AS 'Name Family'
+FROM 
+Employees
+
+
+12500,00	Guy Gilbert	
+13500,00	Kevin Brown	
+43300,00	Roberto Tamburello	
+29800,00	Rob Walters	
+25000,00	Thierry D'Hers	

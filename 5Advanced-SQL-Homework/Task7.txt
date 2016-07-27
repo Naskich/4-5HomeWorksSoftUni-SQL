@@ -1,0 +1,10 @@
+Problem 7.	Write a SQL query to find the number 
+of all employees that have manager.
+
+
+SELECT COUNT(EmployeeID) AS ' Employees with manager '
+FROM Employees
+WHERE ManagerID IS NOT NULL 
+
+ Employees with manager     
+289	                  

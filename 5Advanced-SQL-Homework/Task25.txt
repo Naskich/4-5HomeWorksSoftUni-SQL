@@ -1,0 +1,81 @@
+Problem 25.	Write a SQL query to display the average employee
+ salary by department and job title.
+
+SELECT e.JobTitle, d.Name AS 'Departments', 
+SUM(Salary)/COUNT(JobTitle) AS 'Average Salary'
+FROM Departments d
+JOIN
+Employees e
+ON e.DepartmentID = d.DepartmentID
+GROUP BY e.DepartmentID, e.JobTitle, d.Name
+--------------------------------------------------------------------------------------
+SELECT e.JobTitle, d.Name AS 'Departments',
+  AVG(Salary) AS 'Average Salary'
+FROM Departments d
+JOIN
+Employees e
+ON e.DepartmentID = d.DepartmentID
+GROUP BY e.DepartmentID, e.JobTitle, d.Name  
+
+Result
+
+Accountant	Finance	26400,00
+Accounts Manager	Finance	34700,00
+Accounts Payable Specialist	Finance	19000,00
+Accounts Receivable Specialist	Finance	19000,00
+Application Specialist	Information Services	27400,00
+Assistant to the Chief Financial Officer	Finance	13500,00
+Benefits Specialist	Human Resources	16600,00
+Buyer	Purchasing	18300,00
+Chief Executive Officer	Executive	125500,00
+Chief Financial Officer	Executive	60100,00
+Control Specialist	Document Control	16800,00
+Database Administrator	Information Services	38500,00
+Design Engineer	Engineering	32700,00
+Document Control Assistant	Document Control	10300,00
+Document Control Manager	Document Control	17800,00
+Engineering Manager	Engineering	43300,00
+European Sales Manager	Sales	48100,00
+Facilities Administrative Assistant	Facilities and Maintenance	9800,00
+Facilities Manager	Facilities and Maintenance	24000,00
+Finance Manager	Finance	43300,00
+Human Resources Administrative Assistant	Human Resources	13900,00
+Human Resources Manager	Human Resources	27100,00
+Independent .NET Consultant	Research and Development	48000,00
+Independent Java Consultant	Research and Development	48000,00
+Independent Software Development  Consultant	Research and Development	48000,00
+Information Services Manager	Information Services	50500,00
+Janitor	Facilities and Maintenance	9300,00
+Maintenance Supervisor	Facilities and Maintenance	20400,00
+Marketing Assistant	Marketing	13500,00
+Marketing Manager	Purchasing	37500,00
+Marketing Specialist	Marketing	14400,00
+Master Scheduler	Production Control	23600,00
+Network Administrator	Information Services	32500,00
+Network Manager	Information Services	39700,00
+North American Sales Manager	Sales	48100,00
+Pacific Sales Manager	Sales	48100,00
+Production Control Manager	Production Control	24500,00
+Production Supervisor	Production	25000,00
+Production Technician	Production	12267,5159
+Purchasing Assistant	Purchasing	12800,00
+Purchasing Manager	Quality Assurance	30000,00
+Quality Assurance Manager	Quality Assurance	28800,00
+Quality Assurance Supervisor	Quality Assurance	21600,00
+Quality Assurance Technician	Quality Assurance	10600,00
+Recruiter	Human Resources	18300,00
+Research and Development Engineer	Research and Development	40900,00
+Research and Development Manager	Research and Development	46500,00
+Sales Representative	Sales	23100,00
+Scheduling Assistant	Production Control	16000,00
+Senior Design Engineer	Engineering	36100,00
+Senior Tool Designer	Tool Design	29300,00
+Shipping and Receiving Clerk	Shipping and Receiving	9500,00
+Shipping and Receiving Supervisor	Shipping and Receiving	19200,00
+Stocker	Shipping and Receiving	9000,00
+Tool Designer	Tool Design	25000,00
+Vice President of Engineering	Engineering	63500,00
+Vice President of Production	Production	84100,00
+Vice President of Sales	Sales	72100,00
+
+

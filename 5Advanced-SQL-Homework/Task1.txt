@@ -1,0 +1,13 @@
+
+Problem 1.	Write a SQL query to find the names and salaries of the employees
+ that take the minimal salary in the company.
+
+SELECT FirstName,  LastName, Salary 
+ FROM  
+ Employees
+ WHERE Salary = (SELECT MIN (Salary) FROM Employees)
+
+
+Susan	Eaton	9000,00
+Kim	Ralls	9000,00
+Jimmy	Bischoff	9000,00

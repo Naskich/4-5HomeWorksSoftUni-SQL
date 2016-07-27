@@ -1,0 +1,27 @@
+Problem 21.	Write a SQL query to find all employees, along with their manager and their address.
+You should join the 3 tables: Employees e, Employees m and Addresses a.
+You should submit a SQL file as a part of your homework.
+
+SELECT FirstName +' '+ LastName AS 'Name Family', d.ManagerID , a.AddressText 
+FROM Employees e 
+JOIN Departments d
+ON e.EmployeeID = d.DepartmentID  
+JOIN Addresses a
+ON a.AddressID = e.EmployeeID
+
+Guy Gilbert	12	108 Lakeside Court
+Kevin Brown	4	1343 Prospect St
+Roberto Tamburello	273	1648 Eastgate Lane
+Rob Walters	46	2284 Azalea Avenue
+Thierry D'Hers	6	2947 Vine Lane
+David Bradley	42	3067 Maya
+JoLynn Dobney	148	3197 Thornhill Place
+Ruth Ellerbrock	21	3284 S. Blank Avenue
+Gail Erickson	30	332 Laguna Niguel
+Barry Johnson	3	3454 Bel Air Drive
+Jossef Goldberg	42	3670 All Ways Drive
+Terri Duffy	90	3708 Montana
+Sidney Higa	274	3711 Rollingwood Dr
+Taylor Maxwell	218	3919 Pinto Road
+Jeffrey Ford	85	4311 Clay Rd
+Jo Brown	109	4777 Rockne Drive

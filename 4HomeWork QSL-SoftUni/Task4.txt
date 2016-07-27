@@ -1,0 +1,29 @@
+﻿Problem 4.	Write a SQL query to find all information about all departments
+ (use "SoftUni" database).
+SELECT FirstName +' '+ LastName AS 'Name Family', JobTitle, d.Name AS 'Department',HireDate, 
+Salary, t.Name AS 'City', a.AddressText 
+FROM Employees e 
+JOIN Departments d
+ON e.EmployeeID = d.DepartmentID 
+JOIN Towns t 
+ON t.TownID = e.EmployeeID 
+JOIN Addresses a
+ON a.AddressID = e.EmployeeID
+
+
+Guy Gilbert	Production Technician	Engineering	1998-07-31 00:00:00	12500,00	Redmond	108 Lakeside Court
+Kevin Brown	Marketing Assistant	Tool Design	1999-02-26 00:00:00	13500,00	Calgary	1343 Prospect St
+Roberto Tamburello	Engineering Manager	Sales	1999-12-12 00:00:00	43300,00	Edmonds	1648 Eastgate Lane
+Rob Walters	Senior Tool Designer	Marketing	2000-01-05 00:00:00	29800,00	Seattle	2284 Azalea Avenue
+Thierry D'Hers	Tool Designer	Purchasing	2000-01-11 00:00:00	25000,00	Bellevue	2947 Vine Lane
+David Bradley	Marketing Manager	Research and Development	2000-01-20 00:00:00	37500,00	Issaquah	3067 Maya
+JoLynn Dobney	Production Supervisor	Production	2000-01-26 00:00:00	25000,00	Everett	3197 Thornhill Place
+Ruth Ellerbrock	Production Technician	Production Control	2000-02-06 00:00:00	13500,00	Bothell	3284 S. Blank Avenue
+Gail Erickson	Design Engineer	Human Resources	2000-02-06 00:00:00	32700,00	San Francisco	332 Laguna Niguel
+Barry Johnson	Production Technician	Finance	2000-02-07 00:00:00	13500,00	Index	3454 Bel Air Drive
+Jossef Goldberg	Design Engineer	Information Services	2000-02-24 00:00:00	32700,00	Snohomish	3670 All Ways Drive
+Terri Duffy	Vice President of Engineering	Document Control	2000-03-03 00:00:00	63500,00	Monroe	3708 Montana
+Sidney Higa	Production Technician	Quality Assurance	2000-03-05 00:00:00	13500,00	Renton	3711 Rollingwood Dr
+Taylor Maxwell	Production Supervisor	Facilities and Maintenance	2000-03-11 00:00:00	25000,00	Newport Hills	3919 Pinto Road
+Jeffrey Ford	Production Technician	Shipping and Receiving	2000-03-23 00:00:00	13500,00	Carnation	4311 Clay Rd
+Jo Brown	Production Supervisor	Executive	2000-03-30 00:00:00	25000,00	Sammamish	4777 Rockne Drive

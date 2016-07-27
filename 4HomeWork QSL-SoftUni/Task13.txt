@@ -1,0 +1,61 @@
+Problem 13.	Write a SQL query to find the salary of all employees whose salary is in the range [20000…30000].
+You should submit a SQL file as a part of your homework.
+
+SELECT FirstName +' '+ LastName AS 'Name', Salary
+ FROM Employees
+ WHERE Salary BETWEEN 20000 AND 30000 
+
+
+Rob Walters	29800,00
+Thierry D'Hers	25000,00
+JoLynn Dobney	25000,00
+Taylor Maxwell	25000,00
+Jo Brown	25000,00
+John Campbell	25000,00
+Peter Krebs	24500,00
+Zheng Mu	25000,00
+Paula Barreto de Mattos	27100,00
+Jinghao Liu	25000,00
+Peng Wu	21600,00
+A. Scott Wright	23600,00
+Christian Kleinerman	20400,00
+Reuben D'sa	25000,00
+Cristian Petculescu	25000,00
+Janaina Bueno	27400,00
+Kok-Ho Loh	25000,00
+David Hamilton	25000,00
+Dan Bacon	27400,00
+Eric Gubbels	25000,00
+Jeff Hay	25000,00
+Cynthia Randall	25000,00
+Yuhong Li	25000,00
+Ramesh Meyyappan	27400,00
+Shane Kim	25000,00
+Michael Ray	25000,00
+Karen Berg	27400,00
+Barbara Moreland	26400,00
+Katie McAskill-White	25000,00
+Jack Richins	25000,00
+Andrew Hill	25000,00
+Lori Kane	25000,00
+Hazem Abolrous	28800,00
+Brenda Diaz	25000,00
+Mike Seamans	26400,00
+Gary Altman	24000,00
+Ovidiu Cracium	28800,00
+Janice Galvin	25000,00
+Sheela Word	30000,00
+Michael Blythe	23100,00
+Linda Mitchell	23100,00
+Jillian Carson	23100,00
+Garrett Vargas	23100,00
+Tsvi Reiter	23100,00
+Pamela Ansman-Wolfe	23100,00
+Shu Ito	23100,00
+Jose Saraiva	23100,00
+David Campbell	23100,00
+Jae Pak	23100,00
+Ranjit Varkey Chudukatil	23100,00
+Tete Mensa-Annan	23100,00
+Rachel Valdez	23100,00
+Lynn Tsoflias	23100,00

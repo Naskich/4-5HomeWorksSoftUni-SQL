@@ -1,0 +1,25 @@
+Problem 3.	Write a SQL query to find the full name, salary and 
+department of the employees that take the minimal salary in their department.
+
+SELECT DISTINCT FirstName, LastName, Salary, d.Name AS 'Department'
+FROM Employees e
+JOIN Departments d
+ON e.EmployeeID = d.DepartmentID
+
+
+Barry	Johnson	13500,00	Finance
+David	Bradley	37500,00	Research and Development
+Gail	Erickson	32700,00	Human Resources
+Guy	Gilbert	12500,00	Engineering
+Jeffrey	Ford	13500,00	Shipping and Receiving
+Jo	Brown	25000,00	Executive
+JoLynn	Dobney	25000,00	Production
+Jossef	Goldberg	32700,00	Information Services
+Kevin	Brown	13500,00	Tool Design
+Rob	Walters	29800,00	Marketing
+Roberto	Tamburello	43300,00	Sales
+Ruth	Ellerbrock	13500,00	Production Control
+Sidney	Higa	13500,00	Quality Assurance
+Taylor	Maxwell	25000,00	Facilities and Maintenance
+Terri	Duffy	63500,00	Document Control
+Thierry	D'Hers	25000,00	Purchasing
